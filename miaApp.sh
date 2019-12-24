@@ -25,8 +25,8 @@ end
 
 function scaleX(x, xMin, xMax) 
     m = WIDTH/(xMax - xMin)
-    b = - m * xMin 
-    return(m * x + b) 
+    b = (- m * xMin )
+    return( (m * x) + b) 
 
     --returns the screen value of x (xScreen) that corresponds to the world value of x (xWorld) passed as a parameter 
 end 
@@ -121,8 +121,9 @@ function plotFunction(xMin, xMax, yMin, yMax, dx)
         --draw line between points
 
         y = func(x)
-        plotPoint(x, y, xMin, Xmax, yMin, yMax)
+        plotPoint(x, y, xMin, xMax, yMin, yMax)
     end
 end
 
+print("Starting")
 plotFunction( -10, 10 , -10 , 10 , 1 )
